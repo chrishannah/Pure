@@ -12,9 +12,8 @@
     </header>
     {{ .Content }}
 </article>
-
+<hr />
 {{ if .Site.Params.include_conversation }}
 <script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
 {{ end }}
-
 {{ end }}

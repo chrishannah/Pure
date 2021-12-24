@@ -136,3 +136,23 @@ img, video, iframe {
     max-width: 100%;
     height: auto;
 }
+
+.microblog_conversation {
+    margin: 16px 0;
+}
+
+.microblog_post {
+    padding-bottom: 16px;
+    margin: 16px 0;
+    border-bottom: 1px solid var(--background-alt);
+}
+
+.microblog_post:last-child {
+    padding-bottom: 16px;
+    margin: 16px 0;
+    border-bottom: none;
+}
+
+.microblog_time a {
+    color: var(--text-alt);
+}
