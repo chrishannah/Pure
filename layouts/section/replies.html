@@ -16,6 +16,18 @@
         {{ .Content }}
         </article>
     {{ end }}
+    <nav>
+        {{ if $paginator.HasPrev }}
+        <a href="{{ $pag.Prev.URL }}" title="Previous Page">
+            ← Newer Posts
+        </a>
+        {{ end }}
+        {{ if $paginator.HasNext }}
+        <a href="{{ $pag.Next.URL }}">
+            Older Posts →
+        </a>
+        {{ end }}
+    </nav>
 {{ else }}
     {{ $list := first 25 (where .Data.Pages.ByDate.Reverse "Type" "reply") }}
     {{ range $list  }}
