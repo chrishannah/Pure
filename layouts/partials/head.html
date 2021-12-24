@@ -8,8 +8,8 @@
     </title>
     <meta name="description" content="{{ .Summary }}">
     <link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="{{ " css/style.css " | relURL }}?{{ .Site.Params.theme_seconds }}">
-    <link rel="stylesheet" href="{{ " custom.css " | relURL }}?{{ .Site.Params.theme_seconds }}">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
+    <link rel="stylesheet" href="{{ "custom.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
     {{ if .RSSLink -}}
         <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
         <link href="{{ " podcast.xml " | absURL }}" rel="alternate" type="application/rss+xml" title="Podcast" />
