@@ -14,6 +14,8 @@
         </header>
         {{ .Content }}
     </article>
+    {{ end }}
+
     {{ $pag := $.Paginator }}
     <nav>
         {{ if $pag.HasPrev }}
@@ -27,5 +29,4 @@
         </a>
         {{ end }}
     </nav>
-    {{ end }}
 {{ end }}
