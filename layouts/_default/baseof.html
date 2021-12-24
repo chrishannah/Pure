@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+{{ partial "head.html" . }}
+
+<body>
+    {{ partial "header.html" . }}
+
+    {{ partial "navigation.html" . }}
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    {{ partial "custom_footer.html" . }}
+
+    {{ range .Site.Params.plugins_js }}
+        <script src="{{ . }}"></script>
+    {{ end }}
+</body>
