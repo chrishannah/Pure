@@ -148,9 +148,12 @@ img, video, iframe {
 }
 
 .microblog_post:last-child {
-    padding-bottom: 16px;
-    margin: 16px 0;
+    padding-bottom: 0;
     border-bottom: none;
+}
+
+.microblog_avatar {
+    border-radius: 1em;
 }
 
 .microblog_time a {
