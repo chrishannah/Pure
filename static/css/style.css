@@ -2,7 +2,8 @@
     --background: white;
     --background-alt: #e6e6e6;
     --text: #222222;
-    --accent: #eb960b;
+    --accent: #05669c;
+    --accent-alt: #eef9ff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,6 +12,7 @@
         --background-alt: #121212;
         --text: #eeeeee;
         --accent: #006095;
+        --accent-alt: #00141f;
     }
 }
 
@@ -19,6 +21,7 @@ html {
     color: var(--text);
     font-family: sans-serif;
     line-height: 1.6;
+    font-size: 16px;
 }
 
 body {
@@ -91,4 +94,21 @@ blockquote {
     border-left: 2px solid var(--background-alt);
     padding-left: 1em;
     margin-left: 1em;
+}
+
+code {
+    color: var(--accent);
+    background-color: var(--accent-alt);
+    padding: 3px;
+    border-radius: 0.4em;
+    font-size: 16px;
+}
+
+pre {
+    background-color: var(--accent-alt);
+    border-radius: 0.4em;
+}
+
+pre code {
+    background-color: inherit;
 }
