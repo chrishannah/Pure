@@ -2,14 +2,13 @@
 
 <nav>
     {{ if $pag.HasPrev }}
-		<a href="{{ $pag.Prev.URL }}" title="Previous Page">
-			← Newer Posts
-		</a>
+    <a href="{{ $pag.Prev.URL }}" title="Previous Page">
+        ← Newer Posts
+    </a>
     {{ end }}
-    
     {{ if $pag.HasNext }}
-        <a href="{{ $pag.Next.URL }}">
-            Older Posts →
-        </a>
+    <a href="{{ $pag.Next.URL }}">
+        Older Posts →
+    </a>
     {{ end }}
 </nav>
