@@ -142,14 +142,9 @@ img, video, iframe {
 }
 
 .microblog_post {
-    padding-bottom: 16px;
+    padding-top: 16px;
     margin: 16px 0;
-    border-bottom: 1px solid var(--background-alt);
-}
-
-.microblog_post:last-child {
-    padding-bottom: 0;
-    border-bottom: none;
+    border-top: 1px solid var(--background-alt);
 }
 
 .microblog_avatar {
