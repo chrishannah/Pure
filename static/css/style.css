@@ -13,8 +13,7 @@
         --background-alt: #121212;
         --text: #eeeeee;
         --text-alt: #444444;
-        --accent: #0c73ac;
-        --accent-alt: #00141f;
+        --accent-alt: #1f0008;
     }
 }
 
@@ -37,8 +36,12 @@ a {
     text-decoration: none;
 }
 
-article header h2 a {
+article header h1 a {
     color: var(--text);
+}
+
+article header h1 {
+    margin-block-end: 0.2em;
 }
 
 article header time {
@@ -49,7 +52,7 @@ main {
     margin: 32px 0 32px 0;
 }
 
-header h1 {
+body > header h1 {
     font-size: 2.8em;
     padding-bottom: 0px;
 }
@@ -73,7 +76,7 @@ menu li:last-child:after {
 }
 
 header {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 menu {
