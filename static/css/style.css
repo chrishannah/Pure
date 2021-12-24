@@ -29,6 +29,7 @@ body {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 16px;
 }
 
 a {
@@ -129,4 +130,9 @@ pre {
 
 pre code {
     background-color: inherit;
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
 }
