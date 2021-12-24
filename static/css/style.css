@@ -1,0 +1,28 @@
+:root {
+    --background: white;
+    --background-alt: #f7f7f7;
+    --text: #222222;
+    --accent: #BD0034;
+    --accent-alt: #7d062f;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #050519;
+        --background-alt: #f7f7f7;
+        --text: #eeeeee;
+    }
+}
+
+html {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+a:link {
+    color: var(--accent);
+}
+
+a:visited {
+    color: var(--accent-alt);
+}
