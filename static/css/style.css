@@ -2,8 +2,9 @@
     --background: white;
     --background-alt: #e6e6e6;
     --text: #222222;
-    --accent: #05669c;
-    --accent-alt: #eef9ff;
+    --text-alt: #666666;
+    --accent: #ff003f;
+    --accent-alt: #fff7f9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,7 +12,8 @@
         --background: black;
         --background-alt: #121212;
         --text: #eeeeee;
-        --accent: #006095;
+        --text-alt: #444444;
+        --accent: #0c73ac;
         --accent-alt: #00141f;
     }
 }
@@ -35,8 +37,21 @@ a {
     text-decoration: none;
 }
 
+article header h2 a {
+    color: var(--text);
+}
+
+article header time {
+     color: var(--text-alt);
+}
+
 main {
     margin: 32px 0 32px 0;
+}
+
+header h1 {
+    font-size: 2.8em;
+    padding-bottom: 0px;
 }
 
 menu {
