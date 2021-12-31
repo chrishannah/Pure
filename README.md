@@ -7,6 +7,8 @@ Not that it matters to anyone else, but I specficially structured the HTML so th
 
 It’s a single column layout, and it’s very bare-bones, which is by design. However, I’ve tried to style it in a way where it still looks relatively modern, while keeping a minimal feel.
 
+![Chris Hannah's site in light mode.](images/light-mode.png "Theme in light mode")
 
+![Chris Hannah's site in dark mode.](images/dark-mode.png "Theme in dark mode")
 
 For a full preview you can check out my [microblog](https://micro.chrishannah.me), and if you want to see the code or to use it yourself, then you can find the [theme on GitHub](https://github.com/chrishannah/Pure).
