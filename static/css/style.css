@@ -12,7 +12,7 @@
         --background: black;
         --background-alt: #121212;
         --text: #eeeeee;
-        --text-alt: #444444;
+        --text-alt: #bbbbbb;
         --accent-alt: #1f0008;
     }
 }
@@ -153,4 +153,33 @@ img, video, iframe {
 
 .microblog_time a {
     color: var(--text-alt);
+}
+
+.bookshelf_book {
+    min-height: 140px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.bookshelf_book img {
+    min-height: 100px;
+    width: 80px !important;
+    min-width: 80px !important;
+    max-height: 140px !important;
+    margin-right: 8px;
+    padding-right: 0 !important;
+    border-radius: 6px !important;
+    background-color: var(--background-alt);
+    justify-content: center;
+}
+
+.bookshelf_author {
+    color: var(--text-alt);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.bookshelf_title {
+    font-weight: 600;
+    font-size: 1em;
 }
