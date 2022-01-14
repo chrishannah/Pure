@@ -1,11 +1,7 @@
 <nav>
     <menu>
 		{{ range .Site.Menus.main }} 
-		{{ if .Page.Params.redirect_url }}
-		<li><a href="{{ .Page.Params.redirect_url }}">{{ .Name }}</a></li> 
-		{{ else }}
 		<li><a href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a></li>
-		{{ end }} 
 		{{ end }}
 	</menu>
 </nav>
