@@ -1,0 +1,13 @@
+{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 10) }}
+<nav>
+        {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}" title="Previous Page">
+            ← Newer Posts
+        </a>
+        {{ end }}
+        {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}">
+            Older Posts →
+        </a>
+        {{ end }}
+    </nav>
