@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="{{ "custom.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
 
 	<!-- RSS etc -->
-    {{- if .OutputFormats.Get "RSS" -}}
     {{- with .OutputFormats.Get "RSS" -}}
-    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-    <link href="{{ "podcast.xml" | absURL }}" rel="alternate" type="application/rss+xml" title="Podcast" />
+    <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}"  href="{{ .RelPermalink }}"/>
+    {{- with $.Site.Params.podcast_title }}
+    <link rel="alternate" type="application/rss+xml" title="{{ . }}"  href="{{ "podcast.xml" | absURL }}" />
+    {{ else }}
+    <link rel="alternate" type="application/rss+xml" title="Podcast" href="{{ "podcast.xml" | absURL }}" />
+    {{ end -}}
     <link rel="alternate" type="application/json" title="{{ $.Site.Title }}" href="{{ "feed.json" | absURL }}" />
     <link rel="EditURI" type="application/rsd+xml" href="{{ "rsd.xml" | absURL }}" />
     {{- end -}}
-    {{ end -}}
+   
 
 
     {{ with .Site.Params.twitter_username }}
