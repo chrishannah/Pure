@@ -1,14 +1,23 @@
 # Pure
-A minimal theme for Micro.blog
 
-I’ve named it *Pure*, and that’s mainly because I wanted very minimal styling, and to have it be a pure version of a theme. For the benefit of it acting as a “starter” theme for people that want to maybe want to start tweaking a theme but don’t want to start from scratch. But also for people (like me) that sometimes just want a clean and simple blog.
+A minimal theme for Micro.blog.
 
-Not that it matters to anyone else, but I specficially structured the HTML so that even without CSS, the site will look correct, and be totally readable.
+This theme was built around a few key ideas:
 
-It’s a single column layout, and it’s very bare-bones, which is by design. However, I’ve tried to style it in a way where it still looks relatively modern, while keeping a minimal feel.
+- HTML should be as semantic and clear as possible.
+- The page should be readable without CSS or JavaScript.
+- Style should be simplistic.
+
+There is also the desire for this theme to be a good base for other themes. Because of the semantic HTML, it should be relatively easy to modify the CSS to make the theme more personalised.
+
+## Screenshots
 
 ![Chris Hannah's site in light mode.](images/light-mode.png "Theme in light mode")
 
 ![Chris Hannah's site in dark mode.](images/dark-mode.png "Theme in dark mode")
 
-For a full preview you can check out my [microblog](https://micro.chrishannah.me), and if you want to see the code or to use it yourself, then you can find the [theme on GitHub](https://github.com/chrishannah/Pure).
+For a full preview you can check out my [microblog](https://micro.chrishannah.me).
+
+## Code Style
+
+The code style is handled by [Restyled](https://restyled.io), which will check the style on pull requests, and even point to a new pull request with suggested style changes.
