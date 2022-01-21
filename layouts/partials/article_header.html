@@ -1,7 +1,4 @@
-{{ define "main" }}
-    {{ range .Paginator.Pages  }}
-    <article class="h-entry">
-        <header>
+<header>
             {{ if .Title }}
             <h1 class="p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
             {{ end }}
@@ -11,9 +8,3 @@
                 </time>
             </a>
         </header>
-        {{ .Content }}
-    </article>
-    {{ end }}
-
-{{ partial "pagination.html" . }}
-{{ end }}

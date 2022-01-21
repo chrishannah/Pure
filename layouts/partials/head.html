@@ -10,20 +10,28 @@
     <link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
     <link rel="stylesheet" href="{{ "custom.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
-    {{ if .RSSLink -}}
-        <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-        <link href="{{ " podcast.xml " | absURL }}" rel="alternate" type="application/rss+xml" title="Podcast" />
-        <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ " feed.json " | absURL }}" />
-        <link rel="EditURI" type="application/rsd+xml" href="{{ " rsd.xml " | absURL }}" />
+
+	<!-- RSS etc -->
+    {{- with .OutputFormats.Get "RSS" -}}
+    <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}"  href="{{ .RelPermalink }}"/>
+    {{- with $.Site.Params.podcast_title }}
+    <link rel="alternate" type="application/rss+xml" title="{{ . }}"  href="{{ "podcast.xml" | absURL }}" />
+    {{ else }}
+    <link rel="alternate" type="application/rss+xml" title="Podcast" href="{{ "podcast.xml" | absURL }}" />
     {{ end -}}
+    <link rel="alternate" type="application/json" title="{{ $.Site.Title }}" href="{{ "feed.json" | absURL }}" />
+    <link rel="EditURI" type="application/rsd+xml" href="{{ "rsd.xml" | absURL }}" />
+    {{- end -}}
+
+
     {{ with .Site.Params.twitter_username }}
-        <link rel="me" href="https://twitter.com/{{ . }}" />
+    <link rel="me" href="https://twitter.com/{{ . }}" />
     {{ end }}
     {{ with .Site.Params.github_username }}
-        <link rel="me" href="https://github.com/{{ . }}" />
+    <link rel="me" href="https://github.com/{{ . }}" />
     {{ end }}
     {{ with .Site.Params.instagram_username }}
-        <link rel="me" href="https://instagram.com/{{ . }}" />
+    <link rel="me" href="https://instagram.com/{{ . }}" />
     {{ end }}
     <link rel="me" href="https://micro.blog/{{ .Site.Author.username }}" />
     <link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth" />
@@ -34,7 +42,7 @@
     <link rel="subscribe" href="https://micro.blog/users/follow" />
     <link rel="canonical" href="{{ .Permalink }}"> 
     {{ range .Site.Params.plugins_css }}
-        <link rel="stylesheet" href="{{ . }}" />
+    <link rel="stylesheet" href="{{ . }}" />
     {{ end }}
     {{ range $filename := .Site.Params.plugins_html }}
         {{ partial $filename $ }}
