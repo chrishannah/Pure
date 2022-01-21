@@ -1,9 +1,9 @@
 {{ define "main" }}
 {{ range ( .Paginate (where .Site.RegularPages "Type" "post")).Pages }}
 <article>
-    {{ partial "article_header.html" . }}
-    {{ .Content }}
+	{{ partial "article_header.html" . }}
+	{{ .Content }}
 </article>
-  {{ end }}
+	{{ end }}
 {{ partial "pagination.html" .}}
 {{ end }}

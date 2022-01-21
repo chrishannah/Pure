@@ -1,5 +1,5 @@
 <nav>
-    <menu>
+	<menu>
 		{{ range .Site.Menus.main }} 
 		<li><a href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a></li>
 		{{ end }}

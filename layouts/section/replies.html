@@ -1,48 +1,51 @@
 {{ define "main" }}
 
 {{ if .Site.Params.paginate_replies }}
-    {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "reply") }}
-    {{ $list := $paginator.Pages }}
-    {{ range $list  }}
-        <article class="h-entry">
-            <header>
-            {{ if .Title }}
-                <h1 class="p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-            {{ end }}
-            <a href="{{ .Permalink }}" class="u-url">
-                <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05-07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-            </a>
-        </header>
-        {{ .Content }}
-        </article>
-    {{ end }}
-    <nav>
-        {{ if $paginator.HasPrev }}
-        <a href="{{ $paginator.Prev.URL }}" title="Previous Page">
-            ← Newer Posts
-        </a>
-        {{ end }}
-        {{ if $paginator.HasNext }}
-        <a href="{{ $paginator.Next.URL }}">
-            Older Posts →
-        </a>
-        {{ end }}
-    </nav>
-{{ else }}
-    {{ $list := first 25 (where .Data.Pages.ByDate.Reverse "Type" "reply") }}
-    {{ range $list  }}
-    <article>
-        <header>
-        {{ if .Title }}
-            <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-        {{ end }}
-        <a href="{{ .Permalink }}" class="u-url">
-            <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05-07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-        </a>
-    </header>
-    {{ .Content }}
-    </article>
-    {{ end }}
+{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "reply") }}
+{{ $list := $paginator.Pages }}
+{{ range $list	}}
+<article class="h-entry">
+	<header>
+		{{ if .Title }}
+		<h1 class="p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+		{{ end }}
+		<a href="{{ .Permalink }}" class="u-url">
+			<time class="dt-published">
+				{{ .Date.Format "2 January 2006" }}
+			</time>
+		</a>
+	</header>
+	{{ .Content }}
+</article>
 {{ end }}
-
+<nav>
+	{{ if $paginator.HasPrev }}
+	<a href="{{ $paginator.Prev.URL }}" title="Previous Page">
+		← Newer Posts
+	</a>
+	{{ end }}
+	{{ if $paginator.HasNext }}
+	<a href="{{ $paginator.Next.URL }}">
+		Older Posts →
+	</a>
+	{{ end }}
+</nav>
+{{ else }}
+{{ $list := first 25 (where .Data.Pages.ByDate.Reverse "Type" "reply") }}
+{{ range $list	}}
+<article>
+	<header>
+		{{ if .Title }}
+		<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+		{{ end }}
+		<a href="{{ .Permalink }}" class="u-url">
+			<time class="dt-published">
+				{{ .Date.Format "2 January 2006" }}
+			</time>
+		</a>
+	</header>
+	{{ .Content }}
+</article>
+{{ end }}
+{{ end }}
 {{ end }}
