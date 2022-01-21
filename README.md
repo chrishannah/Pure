@@ -19,5 +19,3 @@ There is also the desire for this theme to be a good base for other themes. Beca
 For a full preview you can check out my [microblog](https://micro.chrishannah.me).
 
 ## Code Style
-
-The code style is handled by [Restyled](https://restyled.io), which will check the style on pull requests, and even point to a new pull request with suggested style changes.
