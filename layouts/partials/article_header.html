@@ -3,8 +3,8 @@
 	<h1 class="p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 	{{ end }}
 	<a href="{{ .Permalink }}" class="u-url">
-		<time class="dt-published" datetime='{{ .Date.Format "2006-01-02 15:04:05-07:00" }}'>
-			{{ .Date.Format "Jan 2, 2006" }}
+		<time class="dt-published">
+			{{ .Date.Format "2 January 2006" }}
 		</time>
 	</a>
 </header>
