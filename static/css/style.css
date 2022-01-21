@@ -9,11 +9,11 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
- --background: black;
- --background-alt: #121212;
- --text: #eeeeee;
- --text-alt: #bbbbbb;
- --accent-alt: #1f0008;
+	--background: black;
+	--background-alt: #121212;
+	--text: #eeeeee;
+	--text-alt: #bbbbbb;
+	--accent-alt: #1f0008;
 	}
 }
 
@@ -46,7 +46,7 @@ article header h1 {
 }
 
 article header time {
-	 color: var(--text-alt);
+	color: var(--text-alt);
 }
 
 main {
