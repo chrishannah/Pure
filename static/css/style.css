@@ -113,6 +113,7 @@ blockquote {
 	border-left: 2px solid var(--background-alt);
 	padding-left: 1em;
 	margin-left: 1em;
+	border-left-color: var(--accent);
 }
 
 code {
