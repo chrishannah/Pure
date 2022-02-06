@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ range ( .Paginate (where .Site.RegularPages "Type" "post")).Pages }}
-<article>
+<article class="h-entry">
 	{{ partial "article_header.html" . }}
 	{{ .Content }}
 </article>
